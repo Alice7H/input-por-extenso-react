@@ -1,36 +1,56 @@
-## Objetivo
+# React Input por Extenso
 
-O curso da Digital Innovation One, ministrado pelo André Lins, mostra os passos para se criar uma biblioteca para React.
+Componente React que retorna número por extenso
 
-## Como desenvolver uma biblioteca?
+## Como instalar
 
-- O que precisamos configurar?
-- Como iremos testar?
-- Como publicar a biblioteca?
-- Como documentar a biblioteca?
+Abaixo as formas de como instalar essa biblioteca utilizando o npm ou yarn:
 
-## O que preciso?
+```
+npm install input-por-extenso-react
+# ou
+yarn add input-por-extenso-react
+```
 
-1. Criar as pastas e inicializar um projeto através do yarn
+## Como usar
 
-2. Instalar o react e sua base de bibliotecas
+Uma forma básica de como utilizar o componente:
 
-3. Configurar um transpilador(babel)
+```jsx
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import ReactInputPorExtenso from "input-por-extenso-react";
 
-4. Configurar um dev server(webpack)
+const App = () => {
+  const [numero, setNumero] = useState("");
 
-5. Criar scripts
+  return (
+    <>
+      <ReactInputPorExtenso
+        tipoExtenso="monetario"
+        onChange={(numeroExtenso) => setNumero(numeroExtenso)}
+      />
+      <p>
+        <strong>Número por extenso</strong>: {numero}
+      </p>
+    </>
+  );
+};
 
-6. Criar área para testar a bibliotecas
+ReactDOM.render(<App />, document.getElementById("root"));
+```
 
-7. Criar componentes para a biblioteca
+## Propriedades
 
-8. Testar a biblioteca
+Esse componente é uma abstração de um componente input do tipo numérico,
+todas as propriedades de um input estão disponíveis.
 
-9. Publicar a biblioteca
+| Propriedade | Valor inicial | Tipo   | Descrição                     |
+| ----------- | ------------- | ------ | ----------------------------- |
+| tipoExtenso | normal        | string | Formato de extensão do número |
 
-## A biblioteca
+<em>
 
-- Componente que retorna número por extenso
-- No formato de um input
-- Utilizando a biblioteca numero-por-extenso.
+Biblioteca desenvolvida durante [aula prática](https://www.youtube.com/watch?v=5zgrL9XGASM) da [Digital Innovation One](https://digitalinnovation.one/)
+
+</em>
