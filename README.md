@@ -1,6 +1,6 @@
 ## Objetivo
 
-O curso da Digital Innovation One mostra os passos para se criar uma biblioteca para React.
+O curso da Digital Innovation One, ministrado pelo André Lins, mostra os passos para se criar uma biblioteca para React.
 
 ## Como desenvolver uma biblioteca?
 
